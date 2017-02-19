@@ -36,7 +36,7 @@ nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index]
 <h1>Foo Bar</h1>
 
 <div id="myContainer">
-  <%= yield_nested %> # this will call the next nested layout or the action template if no more nested layouts.
+  <%= yield_nested %> # this will call the next nested layout or the requested template if no more nested layouts.
 </layout>
 ```
 

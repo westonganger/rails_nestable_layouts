@@ -1,13 +1,13 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-gem_name = 'rails_nested_layouts'
+gem_name = 'rails_nestable_layouts'
 
 require "#{gem_name}/version.rb"
 
 Gem::Specification.new do |s|
   s.name        = gem_name
-  s.version     =  RailsNestedLayouts::VERSION
+  s.version     =  RailsNestableLayouts::VERSION
   s.author	= "Weston Ganger"
   s.email       = 'westonganger@gmail.com'
   s.homepage 	= "https://github.com/westonganger/#{gem_name}"

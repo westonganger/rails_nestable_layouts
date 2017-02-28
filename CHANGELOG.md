@@ -1,5 +1,5 @@
 CHANGELOG
 ---------
 
-- **0.9.0 - Feb 18, 2017**
+- **1.0.0 - Feb 27, 2017**
   - Gem Initial Release

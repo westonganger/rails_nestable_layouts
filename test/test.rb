@@ -6,7 +6,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'yaml'
 require 'minitest'
 
-require 'rails_nested_layouts'
+require 'rails_nestable_layouts'
 
 require 'minitest/autorun'
 
@@ -24,7 +24,7 @@ class Test < MiniTest::Test
 
   def test_controller_methods
     assert_raises NoMethodError do
-      RailsNestedLayouts::Controller.nested_layouts
+      RailsNestableLayouts::Controller.nested_layouts
     end
 
     ActionController::Base.nested_layouts
@@ -38,7 +38,7 @@ class Test < MiniTest::Test
   end
 
   def test_exposes_version
-    assert !RailsNestedLayouts::VERSION.nil?
+    assert !RailsNestableLayouts::VERSION.nil?
   end
 
   def teardown

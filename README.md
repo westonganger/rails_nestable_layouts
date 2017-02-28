@@ -1,4 +1,4 @@
-# Rails Nested Layouts
+# Rails Nestable Layouts
 <a href='https://ko-fi.com/A5071NK' target='_blank'><img height='32' style='border:0px;height:32px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
 
 Dead simple nested layouts support for Rails. Does not monkey patch anything. Can nest as many layouts as desired.
@@ -8,7 +8,7 @@ Dead simple nested layouts support for Rails. Does not monkey patch anything. Ca
 ```ruby
 # Gemfile
 
-gem 'rails_nested_layouts'
+gem 'rails_nestable_layouts'
 ```
 
 # Usage
@@ -17,8 +17,7 @@ gem 'rails_nested_layouts'
 # Controller
 layout :application # main layout, this line is not necessary. Note nested_layouts does not override the main layout.
 
-nested_layouts 'layouts/secondary_layout', only: [:index] # accepts the same options as before_action/before_filter
-nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index]
+nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index] # accepts the same options as before_action/before_filter
 
 
 # Main Layout

@@ -2,9 +2,9 @@ require 'active_support/lazy_load_hooks'
 require 'action_view'
 require 'action_controller'
 
-require 'rails_nested_layouts/version'
+require 'rails_nestable_layouts/version'
 
-module RailsNestedLayouts
+module RailsNestableLayouts
   module Controller
     def nested_layouts(*args)
       if args.last.is_a?(Hash)
@@ -48,9 +48,9 @@ module RailsNestedLayouts
 end
 
 ActiveSupport.on_load :action_controller do
-  ActionController::Base.send(:extend, RailsNestedLayouts::Controller)
+  ActionController::Base.send(:extend, RailsNestableLayouts::Controller)
 end
 
 ActiveSupport.on_load :action_view do
-  ActionView::Base.send(:include, RailsNestedLayouts::Helpers)
+  ActionView::Base.send(:include, RailsNestableLayouts::Helpers)
 end

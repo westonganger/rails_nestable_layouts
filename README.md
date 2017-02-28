@@ -44,8 +44,8 @@ nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index]
 <%= yield_nested %> # this will call the next nested layout or the requested template if no more nested layouts.
 ```
 
-
-## Credits
+<br>
+# Credits
 
 Created by Weston Ganger - @westonganger 
 

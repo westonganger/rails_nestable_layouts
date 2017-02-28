@@ -2,7 +2,8 @@
 
 Dead simple nested layouts support for Rails. Does not monkey patch anything. Can nest as many layouts as desired.
 
-# Install 
+
+## Install 
 
 ```ruby
 # Gemfile
@@ -10,9 +11,10 @@ Dead simple nested layouts support for Rails. Does not monkey patch anything. Ca
 gem 'rails_nestable_layouts'
 ```
 
-# Usage
 
-#### Your Controller
+## Usage
+
+### Your Controller
 ```ruby
 # main layout, this line is not necessary. Note nested_layouts does not override the main layout.
 layout :application 
@@ -21,7 +23,7 @@ layout :application
 nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index] 
 ```
 
-#### Main Layout
+### Main Layout
 ```erb
 <html>
   <head></head>
@@ -35,14 +37,16 @@ nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index]
 </html>
 ```
 
-#### Nested Layout(s)
+### Nested Layout(s)
 ```erb
 <h2>My Nested Layout</h2>
 
 <%= yield_nested %> # this will call the next nested layout or the requested template if no more nested layouts.
 ```
 
-# Credits
-Created by Weston Ganger - @westonganger
+
+## Credits
+
+Created by Weston Ganger - @westonganger 
 
 <a href='https://ko-fi.com/A5071NK' target='_blank'><img height='32' style='border:0px;height:32px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 

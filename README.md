@@ -12,30 +12,34 @@ gem 'rails_nestable_layouts'
 
 # Usage
 
+#### Your Controller
 ```ruby
-# Controller
-layout :application # main layout, this line is not necessary. Note nested_layouts does not override the main layout.
+# main layout, this line is not necessary. Note nested_layouts does not override the main layout.
+layout :application 
 
-nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index] # accepts the same options as before_action/before_filter
+# accepts the same options as before_action/before_filter
+nested_layouts 'layouts/secondary_layout', 'posts/layout', except: [:index] 
+```
 
-
-# Main Layout
+#### Main Layout
+```erb
 <html>
   <head></head>
   <body>
-    # this will call the first nested layout , will fallback to normal functionality if no nested layouts.
-    <%= yield_nested %> # 
+    <h1>My Main Layout</h1>
+    
+    <!-- this will call the first nested layout , will fallback to normal functionality if no nested layouts. -->
+    <%= yield_nested %> 
   </body>
   <footer></footer>
 </html>
+```
 
+#### Nested Layout(s)
+```erb
+<h2>My Nested Layout</h2>
 
-# Nested Layout(s)
-<h1>Foo Bar</h1>
-
-<div id="myContainer">
-  <%= yield_nested %> # this will call the next nested layout or the requested template if no more nested layouts.
-</layout>
+<%= yield_nested %> # this will call the next nested layout or the requested template if no more nested layouts.
 ```
 
 # Credits

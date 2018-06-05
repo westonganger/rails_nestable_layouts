@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name        = gem_name
   s.version     =  RailsNestableLayouts::VERSION
   s.author	= "Weston Ganger"
-  s.email       = 'westonganger@gmail.com'
+  s.email       = 'weston@westonganger.com'
   s.homepage 	= "https://github.com/westonganger/#{gem_name}"
   
   s.summary     = "Dead simple nested layouts for Rails"

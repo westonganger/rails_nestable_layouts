@@ -7,9 +7,7 @@ require 'rails_nestable_layouts/version'
 module RailsNestableLayouts
   module Controller
     def nested_layouts(*args)
-      if args.last.is_a?(Hash)
-        opts = args.pop
-      end
+      opts = args.last.is_a?(Hash) ? args.pop : {}
 
       if args.first.is_a?(Array)
         layouts = args.first

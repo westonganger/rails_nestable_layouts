@@ -10,6 +10,7 @@ module RailsNestableLayouts
       if args.last.is_a?(Hash)
         opts = args.pop
       end
+      opts ||= {}
 
       if args.first.is_a?(Array)
         layouts = args.first

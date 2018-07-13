@@ -1,4 +1,7 @@
 # Rails Nestable Layouts
+<a href="https://badge.fury.io/rb/rails_nested_layouts" target="_blank"><img height="21" style='border:0px;height:21px;' border='0' src="https://badge.fury.io/rb/rails_nested_layouts.svg" alt="Gem Version"></a>
+<a href='https://rubygems.org/gems/rails_nested_layouts' target='_blank'><img height='21' style='border:0px;height:21px;' src='https://ruby-gem-downloads-badge.herokuapp.com/rails_nested_layouts?label=rubygems&type=total&total_label=downloads&color=brightgreen' border='0' alt='RubyGems Downloads' /></a>
+<a href='https://ko-fi.com/A5071NK' target='_blank'><img height='22' style='border:0px;height:22px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=a' border='0' alt='Buy Me a Coffee' /></a> 
 
 Dead simple nested layouts support for Rails. Does not monkey patch anything. Can nest as many layouts as desired.
 
@@ -6,8 +9,6 @@ Dead simple nested layouts support for Rails. Does not monkey patch anything. Ca
 ## Install 
 
 ```ruby
-# Gemfile
-
 gem 'rails_nestable_layouts'
 ```
 

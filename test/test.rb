@@ -15,10 +15,16 @@ class Test < MiniTest::Test
   end
 
   def test_helper_methods
-    ActionView::Base.new.yield_nested    
+    if ActionView::VERSION::STRING.to_f >= 6.1
+      view_instance = ActionView::Base.new(nil, {}, nil)
+    else
+      view_instance = ActionView::Base.new
+    end
+
+    view_instance.yield_nested    
 
     assert_raises ArgumentError do
-      ActionView::Base.new.yield_nested(true)
+      view_instance.yield_nested(true)
     end
   end
 

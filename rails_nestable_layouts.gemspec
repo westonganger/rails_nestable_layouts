@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.summary     = "Dead simple nested layouts for Rails"
   s.description = "Dead simple nested layouts for Rails"
   s.files = Dir.glob("{lib/**/*}") + %w{ LICENSE README.md Rakefile CHANGELOG.md }
-  s.test_files  = Dir.glob("{test/**/*}")
 
   s.add_dependency 'actionview', '>= 3'
   s.add_dependency 'actionpack', '>= 3'

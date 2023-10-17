@@ -3,6 +3,9 @@ gemspec
 
 gem 'minitest'
 
-group :rails do
-  gem 'rails', '>= 3.2.0'
+def get_env(name)
+  (ENV[name] && !ENV[name].empty?) ? ENV[name] : nil
 end
+
+gem 'rails', get_env("RAILS_VERSION")
+gem "sqlite3"

@@ -11,19 +11,17 @@ Gem::Specification.new do |s|
   s.author	= "Weston Ganger"
   s.email       = 'weston@westonganger.com'
   s.homepage 	= "https://github.com/westonganger/#{gem_name}"
-  
+
   s.summary     = "Dead simple nested layouts for Rails"
   s.description = "Dead simple nested layouts for Rails"
   s.files = Dir.glob("{lib/**/*}") + %w{ LICENSE README.md Rakefile CHANGELOG.md }
 
-  s.add_dependency 'actionview', '>= 3'
-  s.add_dependency 'actionpack', '>= 3'
-  s.add_dependency 'activesupport', '>= 3'
+  s.add_dependency 'actionview'
+  s.add_dependency 'actionpack'
+  s.add_dependency 'activesupport'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'
-  s.add_development_dependency 'bundler'
 
-  s.required_ruby_version = '>= 1.9.3'
   s.require_path = 'lib'
 end

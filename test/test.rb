@@ -10,7 +10,7 @@ require 'rails_nestable_layouts'
 
 require 'minitest/autorun'
 
-class Test < MiniTest::Test
+class Test < Minitest::Test
   def setup
   end
 
@@ -21,7 +21,7 @@ class Test < MiniTest::Test
       view_instance = ActionView::Base.new
     end
 
-    view_instance.yield_nested    
+    view_instance.yield_nested
 
     assert_raises ArgumentError do
       view_instance.yield_nested(true)

@@ -8,4 +8,6 @@ def get_env(name)
 end
 
 gem 'rails', get_env("RAILS_VERSION")
-gem "sqlite3"
+
+db_gem = get_env("DB_GEM") || "sqlite3"
+gem db_gem, get_env("DB_GEM_VERSION")

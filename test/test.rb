@@ -6,6 +6,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'yaml'
 require 'minitest'
 
+require "logger" # Fix for Rails 7.0 and below, https://github.com/rails/rails/pull/54264
+
 require 'rails_nestable_layouts'
 
 require 'minitest/autorun'

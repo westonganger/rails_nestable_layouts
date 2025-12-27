@@ -43,7 +43,7 @@ jobs:
           - ruby: "4.0"
             rails_version: "~> 8.0.0"
           - ruby: "4.0"
-            rails_version: "~> 8.0.0"
+            rails_version: "~> 8.1.0"
 
     steps:
     - uses: actions/checkout@v3
